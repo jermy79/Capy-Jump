@@ -1,0 +1,28 @@
+[gd_scene load_steps=4 format=3 uid="uid://d08qd7ptwion3"]
+
+[ext_resource type="Texture2D" uid="uid://cx4uam8xxljho" path="res://o6q5zfmmc9e71.webp" id="1"]
+[ext_resource type="Script" path="res://background.gd" id="2"]
+[ext_resource type="Texture2D" uid="uid://44ovaoh5l2fn" path="res://mike.png" id="3"]
+
+[node name="Node2D" type="CharacterBody2D"]
+position = Vector2(0, 416)
+scale = Vector2(1, 2)
+script = ExtResource("2")
+
+[node name="Sprite3" type="Sprite2D" parent="."]
+position = Vector2(2792, -512)
+scale = Vector2(1.63636, 1.70526)
+texture = ExtResource("1")
+offset = Vector2(354.444, 124.321)
+
+[node name="Sprite4" type="Sprite2D" parent="."]
+position = Vector2(1712, -512)
+scale = Vector2(1.63636, 1.70526)
+texture = ExtResource("1")
+offset = Vector2(354.444, 124.321)
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(2827.5, -306.25)
+scale = Vector2(8.21591, 1.71751)
+texture = ExtResource("3")

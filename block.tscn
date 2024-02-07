@@ -1,0 +1,24 @@
+[gd_scene load_steps=4 format=3 uid="uid://disybm51k53jg"]
+
+[ext_resource type="PackedScene" path="res://floor.tscn" id="1"]
+[ext_resource type="PackedScene" path="res://pipe.tscn" id="2"]
+[ext_resource type="Script" path="res://block.gd" id="3"]
+
+[node name="level_block" type="CharacterBody2D"]
+position = Vector2(512, 0)
+script = ExtResource("3")
+
+[node name="pipe" parent="." instance=ExtResource("2")]
+position = Vector2(1168, -16)
+
+[node name="floor" parent="." instance=ExtResource("1")]
+position = Vector2(1008, 16)
+
+[node name="floor2" parent="." instance=ExtResource("1")]
+position = Vector2(1008, -688)
+
+[node name="pipe2" parent="." instance=ExtResource("2")]
+position = Vector2(1224, -608)
+rotation = 3.14159
+
+[connection signal="score" from="." to="." method="_on_level_block_score"]
