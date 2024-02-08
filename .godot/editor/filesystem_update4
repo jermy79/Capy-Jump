@@ -1,8 +1,8 @@
 res://default_env.tres
+res://block.tscn
 res://mainmenu.tscn
-res://Scenes/block.tscn
 res://main.tscn
 res://floor.tscn
 res://background.tscn
 res://pipe.tscn
-res://block.tscn
+res://movement.gd
