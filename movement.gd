@@ -7,7 +7,7 @@ var lookDir = Vector2.ZERO #velocity of thingy
 signal dead
 var fortnite = 0
 func get_input():
-	if(Input.is_action_pressed("jump")):
+	if(Input.is_action_just_pressed("jump")):
 		veloctity.y = - 300
 func _physics_process(delta):
 	veloctity.y += Gravity

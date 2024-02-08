@@ -7,3 +7,5 @@ res://boom.tscn
 res://floor.tscn
 res://pipe.tscn
 res://movement.gd
+res://Scenes/background.tscn
+res://Scenes/block.tscn

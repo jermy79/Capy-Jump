@@ -9,7 +9,7 @@ position = Vector2(512, 0)
 script = ExtResource("3")
 
 [node name="pipe" parent="." instance=ExtResource("2")]
-position = Vector2(1168, -16)
+position = Vector2(1168, -12)
 
 [node name="floor" parent="." instance=ExtResource("1")]
 position = Vector2(1008, 16)
@@ -18,7 +18,7 @@ position = Vector2(1008, 16)
 position = Vector2(1008, -652)
 
 [node name="pipe2" parent="." instance=ExtResource("2")]
-position = Vector2(1224, -608)
+position = Vector2(1224, -619)
 rotation = 3.14159
 
 [connection signal="score" from="." to="." method="_on_level_block_score"]
