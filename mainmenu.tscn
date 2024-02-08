@@ -34,13 +34,15 @@ offset_bottom = 37.0
 text = "Start"
 
 [node name="Label" type="Label" parent="."]
-layout_mode = 0
+layout_mode = 1
+anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
-offset_left = -192.0
-offset_top = 120.0
-offset_right = 208.0
-offset_bottom = 345.0
+offset_left = -51.0
+offset_top = 134.0
+offset_right = 349.0
+offset_bottom = 359.0
+grow_horizontal = 2
 theme_override_fonts/font = SubResource("1")
 text = "Capy Jump :)"
 

@@ -16,8 +16,7 @@ func _physics_process(delta):
 	get_input()
 	set_velocity(veloctity)
 	move_and_slide()
-	lookDir.y = (veloctity.y - 400) 
-	look_at(lookDir)
+
 	for i in get_slide_collision_count():
 		var collision = get_slide_collision(i)
 		emit_signal("dead")

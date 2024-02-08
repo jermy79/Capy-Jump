@@ -4,3 +4,6 @@ res://block.tscn
 res://main.tscn
 res://background.tscn
 res://boom.tscn
+res://floor.tscn
+res://pipe.tscn
+res://movement.gd
