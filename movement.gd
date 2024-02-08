@@ -11,14 +11,9 @@ func get_input():
 		veloctity.y = - 300
 		lookDir.y = + 300
 func _physics_process(delta):
-	lookDir.x = - 10
 	veloctity.y += Gravity
-	lookDir.y +=2
 	if veloctity.y > MAXSPEED:
 		veloctity.y = MAXSPEED
-	if lookDir.y > 100:
-		lookDir.y = 100
-	look_at(lookDir)
 	get_input()
 	set_velocity(veloctity)
 	move_and_slide()
