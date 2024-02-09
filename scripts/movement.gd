@@ -12,7 +12,7 @@ func get_input():
 		veloctity.y = - 300
 		lookDir = - 30
 		$AudioStreamPlayer2D.play()
-func _physics_process(delta):
+func _physics_process(_delta):
 	if !deadStop:
 		if !get_parent().paused:
 			veloctity.y += Gravity
@@ -27,7 +27,6 @@ func _physics_process(delta):
 			move_and_slide()
 
 		for i in get_slide_collision_count():
-			var collision = get_slide_collision(i)
 			$explostion.play()
 			emit_signal("dead")
 
