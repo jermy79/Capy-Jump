@@ -6,9 +6,10 @@ extends CharacterBody2D
 # var b = "text"
 
 func _physics_process(delta):
-	velocity.x = -200 
-	set_velocity(velocity)
-	move_and_slide()
+	if !get_parent().paused:
+		velocity.x = -200 
+		set_velocity(velocity)
+		move_and_slide()
 	
 
 

@@ -1,21 +1,22 @@
 [gd_scene load_steps=3 format=3 uid="uid://bu2osdd03w6ku"]
 
-[ext_resource type="Texture2D" uid="uid://bhxj2ygdjijdv" path="res://icon.png" id="1"]
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_rbtdc"]
+load_path = "res://.godot/imported/icon.png-487276ed1e3a0c39cad0279d744ee560.ctex"
 
 [sub_resource type="RectangleShape2D" id="1"]
-size = Vector2(39.7508, 46.4998)
+size = Vector2(42.6667, 64)
 
 [node name="pipe" type="CharacterBody2D" groups=["win"]]
 position = Vector2(-41, 0)
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(27.062, -296)
+position = Vector2(73.1042, -320)
 rotation = 1.5708
-scale = Vector2(9.39186, 0.845687)
-texture = ExtResource("1")
+scale = Vector2(10, 0.994369)
+texture = SubResource("CompressedTexture2D_rbtdc")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(27.8303, -295.786)
-rotation = 1.57467
+position = Vector2(73, -320)
+rotation = 1.5708
 scale = Vector2(15, 1)
 shape = SubResource("1")

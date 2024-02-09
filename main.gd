@@ -3,6 +3,7 @@ var score = 0
 @onready var wee = get_node("score2")
 var wow = 0
 var dead = 0
+var paused = false
 # Declare member variables here. Examples:
 # var a = 2
 # var b = "text"
@@ -26,8 +27,12 @@ func spawnb():
 func get_input():
 	if(Input.is_action_pressed("mike")):
 		$Node2D3/Sprite2D.show()
+	if(Input.is_action_pressed("pause")):
+		$Node2D2.show()
+		$Timer.paused = true
+		$Timer2.paused = true
+		paused = true
 func _ready():
-	
 	$Timer.start()
 	$Timer2.start() # If autostart isn't selected, will start the timer
 	spawn()  
@@ -42,21 +47,34 @@ func _on_Timer2_timeout():
 func _on_Area2D_body_entered(body):
 	body.queue_free()
 func _on_capy_dead():
+	$capy.set_rotation_degrees(0)
 	$Control.show()
 	$capy/Sprite2D.set_offset(Vector2(100000,100000))
+	$capy.remove_child($capy/CollisionShape2D)
+	$capy.deadStop = true
 	$capy/Node2D.play("default")
+	paused = true
 	dead = 1
 func score1(val):
 	wow += val
 func _physics_process(delta):
-	get_input()
-	if (dead == 0):
-		score = $level_block.scorefr
-		$score/Label2.set_text(str(wow))
-		if $points2.is_colliding() == true:
-			var hit = $points2.get_collider()
-			if (hit):
-					hit.queue_free()
-					score1(1)
+	if !paused:
+		get_input()
+		if (dead == 0):
+			score = $level_block.scorefr
+			$score/Label2.set_text(str(wow))
+			if $points2.is_colliding() == true:
+				var hit = $points2.get_collider()
+				if (hit):
+						hit.queue_free()
+						score1(1)
 func _on_Node2D_animation_finished():
 	$capy.queue_free()
+
+
+func _on_paused():
+	paused = false
+	$Node2D2.hide()
+	$Timer.paused = false
+	$Timer2.paused = false
+	

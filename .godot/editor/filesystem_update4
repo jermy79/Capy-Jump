@@ -1,8 +1,14 @@
 res://default_env.tres
-res://mainmenu.tscn
-res://movement.gd
-res://block.tscn
 res://main.tscn
+res://mainmenu.tscn
+res://block.tscn
 res://floor.tscn
 res://background.tscn
 res://pipe.tscn
+res://player.tscn
+res://main.gd
+res://Pause.gd
+res://block.gd
+res://floor.gd
+res://movement.gd
+res://background.gd

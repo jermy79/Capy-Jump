@@ -1,16 +1,7 @@
-[gd_scene load_steps=4 format=3 uid="uid://87vrmsu73wxh"]
+[gd_scene load_steps=3 format=3 uid="uid://87vrmsu73wxh"]
 
 [ext_resource type="Script" path="res://mainmenu.gd" id="1"]
-[ext_resource type="FontFile" uid="uid://djk4yxe5gfa74" path="res://Arial Unicode.ttf" id="2"]
-
-[sub_resource type="FontFile" id="1"]
-fallbacks = Array[Font]([ExtResource("2")])
-cache/0/16/0/ascent = 0.0
-cache/0/16/0/descent = 0.0
-cache/0/16/0/underline_position = 0.0
-cache/0/16/0/underline_thickness = 0.0
-cache/0/16/0/scale = 1.0
-cache/0/16/0/kerning_overrides/16/0 = Vector2(0, 0)
+[ext_resource type="FontFile" uid="uid://snl17k6ertdm" path="res://CementpersonaluseExtrabold-K7g3X.otf" id="2_u8khf"]
 
 [node name="Control" type="Control"]
 layout_mode = 3
@@ -38,12 +29,13 @@ layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
-offset_left = -51.0
-offset_top = 134.0
-offset_right = 349.0
-offset_bottom = 359.0
+offset_left = -352.0
+offset_top = 120.0
+offset_right = 342.0
+offset_bottom = 345.0
 grow_horizontal = 2
-theme_override_fonts/font = SubResource("1")
-text = "Capy Jump :)"
+theme_override_fonts/font = ExtResource("2_u8khf")
+theme_override_font_sizes/font_size = 100
+text = "C a p y   J u m p "
 
 [connection signal="pressed" from="Button" to="." method="_on_Button_pressed"]
