@@ -13,4 +13,4 @@ func _ready():
 
 func _on_Button_pressed():
 # warning-ignore:return_value_discarded
-	get_tree().change_scene_to_file("res://mainmenu.tscn")
+	get_tree().change_scene_to_file("res://scenes/mainmenu.tscn")

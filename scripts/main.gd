@@ -4,6 +4,7 @@ var score = 0
 var wow = 0
 var dead = 0
 var paused = false
+var songPos
 # Declare member variables here. Examples:
 # var a = 2
 # var b = "text"
@@ -29,6 +30,8 @@ func get_input():
 		$Node2D3/Sprite2D.show()
 	if(Input.is_action_pressed("pause")):
 		$Node2D2.show()
+		songPos = $AudioStreamPlayer2D.get_playback_position()
+		$AudioStreamPlayer2D.stop()
 		$Timer.paused = true
 		$Timer2.paused = true
 		paused = true
@@ -68,11 +71,13 @@ func _physics_process(delta):
 				if (hit):
 						hit.queue_free()
 						score1(1)
+						$score/AudioStreamPlayer2D.play()
 func _on_Node2D_animation_finished():
 	$capy.queue_free()
 
 
 func _on_paused():
+	$AudioStreamPlayer2D.play(songPos)
 	paused = false
 	$Node2D2.hide()
 	$Timer.paused = false

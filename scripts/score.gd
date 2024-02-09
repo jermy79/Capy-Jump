@@ -13,6 +13,7 @@ func _ready():
 
 
 func _physics_process(delta):
-	velocity.x = bvelocity
-	set_velocity(velocity)
-	move_and_slide()
+	if !get_parent().paused:
+		velocity.x = bvelocity
+		set_velocity(velocity)
+		move_and_slide()

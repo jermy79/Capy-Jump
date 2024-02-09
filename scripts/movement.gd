@@ -11,6 +11,7 @@ func get_input():
 	if(Input.is_action_just_pressed("jump")):
 		veloctity.y = - 300
 		lookDir = - 30
+		$AudioStreamPlayer2D.play()
 func _physics_process(delta):
 	if !deadStop:
 		if !get_parent().paused:
@@ -27,6 +28,7 @@ func _physics_process(delta):
 
 		for i in get_slide_collision_count():
 			var collision = get_slide_collision(i)
+			$explostion.play()
 			emit_signal("dead")
 
 
