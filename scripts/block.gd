@@ -8,7 +8,7 @@ var scorefr = 0
 var pipeSpeed = -1
 var pipeDis
 var translate = Vector2(0,pipeSpeed)
-var points = 4
+var points = 0
 
 
 func _ready():
@@ -27,7 +27,7 @@ func _physics_process(_delta):
 	if !get_parent().paused:
 		velocity.x = bvelocity
 		set_velocity(velocity)
-		if points > 3:
+		if points > 7:
 			$Pipes.translate(translate)
 			if $Pipes.position.y < -110:
 					translate.y *= -1

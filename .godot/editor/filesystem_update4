@@ -1,14 +1,11 @@
 res://default_env.tres
 res://scenes/main.tscn
 res://scenes/mainmenu.gdshader
+res://scripts/main.gd
+res://scripts/block.gd
 res://scenes/mainmenu.tscn
 res://scenes/block.tscn
 res://scenes/floor.tscn
 res://scenes/background.tscn
 res://scenes/pipe.tscn
 res://scenes/player.tscn
-res://scripts/main.gd
-res://scripts/background.gd
-res://scripts/block.gd
-res://scripts/score.gd
-res://scripts/movement.gd

@@ -5,6 +5,7 @@ var wow = 0
 var dead = 0
 var paused = false
 var songPos
+var diff = 0
 # Declare member variables here. Examples:
 # var a = 2
 # var b = "text"
@@ -18,6 +19,8 @@ func spawn():
 	var scene = load("res://scenes/block.tscn")
 	var scene2 = load("res://scenes/score.tscn")
 	var block1 = scene.instantiate()
+	block1.points = diff
+	diff += 1
 	var block2 = scene2.instantiate()
 	add_child(block1)
 	add_child(block2)
