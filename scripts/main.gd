@@ -1,26 +1,12 @@
 extends Node2D
-var score = 0
 @onready var wee = get_node("score2")
-var wow = 0
 var dead = 0
 var paused = false
 var songPos
-var diff = 0
-# Declare member variables here. Examples:
-# var a = 2
-# var b = "text"
-
-
-# Called when the node enters the scene tree for the first time.
-#Load the resourse using preload
-
-
 func spawn():
 	var scene = load("res://scenes/block.tscn")
 	var scene2 = load("res://scenes/score.tscn")
 	var block1 = scene.instantiate()
-	block1.points = diff
-	diff += 1
 	var block2 = scene2.instantiate()
 	add_child(block1)
 	add_child(block2)
@@ -60,19 +46,17 @@ func _on_capy_dead():
 	$capy/Node2D.play("default")
 	paused = true
 	dead = 1
-func score1(val):
-	wow += val
+
 func _physics_process(_delta):
 	if !paused:
 		get_input()
 		if (dead == 0):
-			score = $level_block.scorefr
-			$score/Label2.set_text(str(wow))
+			$score/Label2.set_text(str(GlobalVars.score))
 			if $points2.is_colliding() == true:
 				var hit = $points2.get_collider()
 				if (hit):
 						hit.queue_free()
-						score1(1)
+						GlobalVars.score += 1
 						$score/AudioStreamPlayer2D.play()
 func _on_Node2D_animation_finished():
 	$capy.queue_free()

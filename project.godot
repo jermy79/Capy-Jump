@@ -15,9 +15,9 @@ run/main_scene="res://scenes/mainmenu.tscn"
 config/features=PackedStringArray("4.2")
 config/icon="res://assests/icon.png"
 
-[display]
+[autoload]
 
-window/stretch/mode="canvas_items"
+GlobalVars="*res://scripts/global_vars.gd"
 
 [global]
 

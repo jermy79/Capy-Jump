@@ -17,6 +17,7 @@ position = Vector2(-3.76994, -2.48912)
 rotation = -1.59587
 scale = Vector2(4.22791, 4.88845)
 shape = SubResource("CapsuleShape2D_25160")
+disabled = true
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 scale = Vector2(0.1, 0.1)

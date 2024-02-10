@@ -18,4 +18,5 @@ func _ready():
 
 func _on_Button_pressed():
 # warning-ignore:return_value_discarded
+	GlobalVars.score = 0
 	get_tree().change_scene_to_file("res://scenes/main.tscn")
