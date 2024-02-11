@@ -18,4 +18,7 @@ func _ready():
 
 func _on_Button_pressed():
 # warning-ignore:return_value_discarded
+	GlobalVars.score = 0
+	GlobalVars.diff = 5
+	GlobalVars.pipeSpeed = -1
 	get_tree().change_scene_to_file("res://scenes/main.tscn")
