@@ -19,6 +19,10 @@ config/icon="res://assests/icon.png"
 
 GlobalVars="*res://scripts/global_vars.gd"
 
+[display]
+
+window/stretch/mode="canvas_items"
+
 [global]
 
 touch=false

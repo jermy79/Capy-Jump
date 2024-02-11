@@ -1,7 +1,7 @@
 extends Node
 var score = 0
-var diff = 5
-
+var diff = 2
+var pipeSpeed = -1
 # Called when the node enters the scene tree for the first time.
 func _ready():
 

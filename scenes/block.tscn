@@ -22,9 +22,9 @@ scale = Vector2(1, 1.64)
 
 [node name="pipe" parent="Pipes" instance=ExtResource("2")]
 z_as_relative = false
-position = Vector2(1123, -353.244)
+position = Vector2(1120, -351.22)
 
 [node name="pipe2" parent="Pipes" instance=ExtResource("2")]
 z_as_relative = false
-position = Vector2(1269, -199.683)
+position = Vector2(1269, -189.927)
 rotation = 3.14159

@@ -12,3 +12,5 @@ res://scripts/main.gd
 res://scripts/global_vars.gd
 res://scenes/score.tscn
 res://scripts/mainmenu.gd
+res://scripts/restart.gd
+res://scripts/QuitMenu.gd
